@@ -6,7 +6,7 @@ import Service.VehicleFactory;
 
 public class Main {
     public static void main(String[] args) {
-        ParkingLotController controller = new ParkingLotController("ParkingLot-");
+        ParkingLotController controller = new ParkingLotController("ParkingLot-1");
 
         // Add floors to the parking lot
         controller.addFloor(); // Floor 1

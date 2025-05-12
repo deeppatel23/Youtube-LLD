@@ -4,27 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b5c821c1-5fcf-4e81-a1bb-a5c48b80a15d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/AbstractFactoryDP/GoodCode/AbstractUIFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FactoryDP/GoodCode/Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Solid_Principles/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AbstractFactoryDP/GoodCode/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AbstractFactoryDP/GoodCode/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AbstractFactoryDP/GoodCode/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AbstractFactoryDP/GoodCode/UserInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FactoryDP/BadCode/EmailNotification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FactoryDP/BadCode/EmailNotification.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FactoryDP/BadCode/NotificationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FactoryDP/BadCode/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FactoryDP/BadCode/SMSNotification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FactoryDP/BadCode/SMSNotification.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FactoryDP/GoodCode/EmailNotification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FactoryDP/GoodCode/EmailNotification.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FactoryDP/GoodCode/NotificationFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FactoryDP/GoodCode/NotificationFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FactoryDP/GoodCode/NotificationService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SingletonDP/GoodCode/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SingletonDP/GoodCode/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SingletonDP/GoodCode/DatabaseConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SingletonDP/GoodCode/DatabaseConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Solid_Principles/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Solid_Principles/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Solid_Principles/src/InterfaceSegregation/InvoiceManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Solid_Principles/src/InterfaceSegregation/InvoiceManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Solid_Principles/src/LiskovSubstitutionPrinciple/InvoiceManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Solid_Principles/src/LiskovSubstitutionPrinciple/InvoiceManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Solid_Principles/src/OpenClosed/InvoiceManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Solid_Principles/src/OpenClosed/InvoiceManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Solid_Principles/src/SingleResponsibility/InvoiceCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Solid_Principles/src/SingleResponsibility/InvoiceCalculator.java" afterDir="false" />
-    </list>
+    <list default="true" id="b5c821c1-5fcf-4e81-a1bb-a5c48b80a15d" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -183,7 +163,7 @@
       <workItem from="1746848459863" duration="6964000" />
       <workItem from="1746937233239" duration="1479000" />
       <workItem from="1746976908619" duration="2762000" />
-      <workItem from="1747021943130" duration="3178000" />
+      <workItem from="1747021943130" duration="3217000" />
     </task>
     <servers />
   </component>

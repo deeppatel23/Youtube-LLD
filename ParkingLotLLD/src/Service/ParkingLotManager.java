@@ -1,31 +1,24 @@
 package Service;
 
 import Enums.VehicleType;
-import Models.Floor;
-import Models.ParkingSlot;
-import Models.Ticket;
-import Models.Vehicle;
+import Models.*;
 
 import java.util.*;
 
 public class ParkingLotManager {
-    String parkingLotId;
-    List<Floor> floors;
-    List<Ticket> activeTickets;
+    ParkingLot parkingLot;
 
     public ParkingLotManager(String parkingLotId) {
-        this.parkingLotId = parkingLotId;
-        floors = new ArrayList<>();
-        activeTickets = new ArrayList<>();
+        this.parkingLot = new ParkingLot(parkingLotId);
     }
 
     public void addFloor(Floor floor) {
-        floors.add(floor);
+        parkingLot.addFloor(floor);
     }
 
     public Map<Integer, List<ParkingSlot>> getAllFreeSlotsCountPerFloorPerVehicleType(VehicleType vehicleType) {
         Map<Integer, List<ParkingSlot>>freeSlotsCount = new HashMap<>();
-        for (Floor floor : this.floors) {
+        for (Floor floor : parkingLot.getFloors()) {
             List<ParkingSlot>parkingSlotList = new ArrayList<>();
             for (ParkingSlot parkingSlot : floor.getParkingSlotList()) {
                 if (!parkingSlot.isOccupied() && parkingSlot.getSlotType() == vehicleType) {
@@ -39,7 +32,7 @@ public class ParkingLotManager {
 
     public Map<Integer, List<ParkingSlot>> getAllOccupiedSlotsCountPerFloorPerVehicleType(VehicleType vehicleType) {
         Map<Integer, List<ParkingSlot>>freeSlotsCount = new HashMap<>();
-        for (Floor floor : this.floors) {
+        for (Floor floor : parkingLot.getFloors()) {
             List<ParkingSlot>parkingSlotList = new ArrayList<>();
             for (ParkingSlot parkingSlot : floor.getParkingSlotList()) {
                 if (parkingSlot.isOccupied() && parkingSlot.getSlotType() == vehicleType) {
@@ -52,14 +45,14 @@ public class ParkingLotManager {
     }
 
     public Optional<Ticket> parkVehicle (Vehicle vehicle) {
-        for (Floor floor : floors) {
+        for (Floor floor : parkingLot.getFloors()) {
             for (ParkingSlot parkingSlot : floor.getParkingSlotList()) {
                 if (!parkingSlot.isOccupied() && parkingSlot.getSlotType() == vehicle.getVehicleType()) {
                     parkingSlot.setParkedVehicle(vehicle);
                     parkingSlot.setOccupied(true);
-                    String ticketId = parkingLotId + " Floor number: " + floor.getFloorNumber() + " Slot number: " + parkingSlot.getSlotNumber();
+                    String ticketId = parkingLot.getParkingLotId() + " Floor number: " + floor.getFloorNumber() + " Slot number: " + parkingSlot.getSlotNumber();
                     Ticket ticket = new Ticket(ticketId, vehicle, floor.getFloorNumber(), parkingSlot.getSlotNumber(), new Date());
-                    activeTickets.add(ticket);
+                    parkingLot.addActiveTicket(ticket);
                     return Optional.of(ticket);
                 }
             }
@@ -68,13 +61,13 @@ public class ParkingLotManager {
     }
 
     public Optional<Vehicle> unParkVehicle (Ticket ticket) {
-        for (Floor floor : floors) {
+        for (Floor floor : parkingLot.getFloors()) {
             if (floor.getFloorNumber() == ticket.getFloorNumber()) {
                 for (ParkingSlot parkingSlot : floor.getParkingSlotList()) {
                     if (parkingSlot.getSlotNumber() == ticket.getSlotNumber()) {
                         parkingSlot.setOccupied(false);
                         parkingSlot.setParkedVehicle(null);
-                        activeTickets.remove(ticket);
+                        parkingLot.removeActiveTicket(ticket);
                         return Optional.of(ticket.getVehicle());
                     }
                 }
@@ -84,26 +77,26 @@ public class ParkingLotManager {
     }
 
     public String getParkingLotId() {
-        return parkingLotId;
+        return parkingLot.getParkingLotId();
     }
 
     public void setParkingLotId(String parkingLotId) {
-        this.parkingLotId = parkingLotId;
+        parkingLot.setParkingLotId(parkingLotId);
     }
 
     public List<Floor> getFloors() {
-        return floors;
+        return parkingLot.getFloors();
     }
 
     public void setFloors(List<Floor> floors) {
-        this.floors = floors;
+        parkingLot.setFloors(floors);
     }
 
     public List<Ticket> getActiveTickets() {
-        return activeTickets;
+        return parkingLot.getActiveTickets();
     }
 
     public void setActiveTickets(List<Ticket> activeTickets) {
-        this.activeTickets = activeTickets;
+        parkingLot.setActiveTickets(activeTickets);
     }
 }
