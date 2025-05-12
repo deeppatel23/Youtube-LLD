@@ -5,6 +5,7 @@ public class Application {
         System.out.println("User login process:");
         // Get the singleton instance
         DatabaseConnection conn1 = DatabaseConnection.getInstance();
+        System.out.printf("Var A value: "+ DatabaseConnection.varA + "\n");
         conn1.executeQuery("SELECT * FROM users WHERE username='john'");
 
         System.out.println("\nProduct search process:");

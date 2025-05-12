@@ -11,6 +11,6 @@ public class InvoiceManager {
         Invoice invoice1 = new Invoice(100);
         invoice1.generateInvoicePremium();
 
-//        invoice.generateInvoiceFullDiscount();
+        invoice.generateInvoiceFullDiscount();
     }
 }

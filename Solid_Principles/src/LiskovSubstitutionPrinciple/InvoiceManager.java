@@ -10,10 +10,10 @@ public class InvoiceManager {
         Invoice invoice = new FreeInvoice(100);
         invoice.process();
 
-        Invoice invoice1 = new PremiumInvoice(100);
-        invoice1.process();
+        invoice = new PremiumInvoice(100);
+        invoice.process();
 
-        Invoice invoice2 = new StandardInvoice(100);
-        invoice2.process();
+        invoice = new StandardInvoice(100);
+        invoice.process();
     }
 }

@@ -3,6 +3,7 @@ package SingletonDP.GoodCode;
 public class DatabaseConnection {
     // Private static instance variable
     private static DatabaseConnection instance;
+    public static int varA = 0;
 
     // Connection properties
     private String url;
@@ -21,10 +22,12 @@ public class DatabaseConnection {
     }
 
     // Public static method to get the singleton instance
+    //T1 T2
     public static DatabaseConnection getInstance() {
         // Lazy initialization - create only when needed
-        if (instance == null) {
-            instance = new DatabaseConnection();
+        //T1 T2
+        if (instance == null) { //T1 this is true //T2 this is ture
+            instance = new DatabaseConnection(); //before T1 initialise instance
         }
         return instance;
     }
@@ -47,7 +50,9 @@ public class DatabaseConnection {
 
     // Thread-safe version (more advanced)
     // Needed when Multiple threads are accessing the Singleton
+    //T1 T2
     public static synchronized DatabaseConnection getThreadSafeInstance() {
+        //T1, but T2 cannot enter until T1 exit
         if (instance == null) {
             instance = new DatabaseConnection();
         }

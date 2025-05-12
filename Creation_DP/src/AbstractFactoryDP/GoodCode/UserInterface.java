@@ -1,13 +1,8 @@
 package AbstractFactoryDP.GoodCode;
 
 public class UserInterface {
-    private UIFactory factory;
 
-    public UserInterface(UIFactory factory) {
-        this.factory = factory;
-    }
-
-    public void createUI() {
+    public void createUI(UIFactory factory) {
         Button button = factory.createButton();
         Checkbox checkbox = factory.createCheckbox();
 
