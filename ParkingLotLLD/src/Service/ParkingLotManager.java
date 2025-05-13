@@ -16,7 +16,7 @@ public class ParkingLotManager {
         parkingLot.addFloor(floor);
     }
 
-    public Map<Integer, List<ParkingSlot>> getAllFreeSlotsCountPerFloorPerVehicleType(VehicleType vehicleType) {
+    public Map<Integer, List<ParkingSlot>> getAllFreeSlotsPerFloorPerVehicleType(VehicleType vehicleType) {
         Map<Integer, List<ParkingSlot>>freeSlotsCount = new HashMap<>();
         for (Floor floor : parkingLot.getFloors()) {
             List<ParkingSlot>parkingSlotList = new ArrayList<>();
@@ -30,7 +30,7 @@ public class ParkingLotManager {
         return freeSlotsCount;
     }
 
-    public Map<Integer, List<ParkingSlot>> getAllOccupiedSlotsCountPerFloorPerVehicleType(VehicleType vehicleType) {
+    public Map<Integer, List<ParkingSlot>> getAllOccupiedSlotsPerFloorPerVehicleType(VehicleType vehicleType) {
         Map<Integer, List<ParkingSlot>>freeSlotsCount = new HashMap<>();
         for (Floor floor : parkingLot.getFloors()) {
             List<ParkingSlot>parkingSlotList = new ArrayList<>();

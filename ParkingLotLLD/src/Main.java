@@ -13,22 +13,26 @@ public class Main {
         controller.addFloor(); // Floor 2
 
         // Add slots to floor 1
-        controller.addSlot(1, VehicleType.TRUCK); // Slot 1 for truck
-        controller.addSlot(1, VehicleType.BIKE);  // Slot 2 for bike
-        controller.addSlot(1, VehicleType.BIKE);  // Slot 3 for bike
-        controller.addSlot(1, VehicleType.CAR);   // Slot 4 for car
-        controller.addSlot(1, VehicleType.CAR);   // Slot 5 for car
+        controller.addSlot(1, VehicleType.TRUCK);
+        controller.addSlot(1, VehicleType.BIKE);
+        controller.addSlot(1, VehicleType.BIKE);
+        controller.addSlot(1, VehicleType.CAR);
+        controller.addSlot(1, VehicleType.CAR);
 
         // Add slots to floor 2
-        controller.addSlot(2, VehicleType.TRUCK); // Slot 1 for truck
-        controller.addSlot(2, VehicleType.BIKE);  // Slot 2 for bike
-        controller.addSlot(2, VehicleType.BIKE);  // Slot 3 for bike
-        controller.addSlot(2, VehicleType.CAR);   // Slot 4 for car
+        controller.addSlot(2, VehicleType.TRUCK);
+        controller.addSlot(2, VehicleType.BIKE);
+        controller.addSlot(2, VehicleType.BIKE);
+        controller.addSlot(2, VehicleType.CAR);
 
         // Park vehicles
         controller.displayFreeSlotsCount(VehicleType.CAR);
+        controller.displayFreeSlots(VehicleType.CAR);
         Vehicle car1 = VehicleFactory.createVehicle(VehicleType.CAR, "MH-01-AB-1234", "Red");
         Ticket ticket1 = controller.parkVehicle(car1);
+        controller.displayFreeSlotsCount(VehicleType.CAR);
+        controller.displayFreeSlots(VehicleType.CAR);
+        controller.displayOccupiedSlots(VehicleType.CAR);
 
         controller.displayFreeSlotsCount(VehicleType.BIKE);
         Vehicle bike1 = VehicleFactory.createVehicle(VehicleType.BIKE, "MH-01-AB-5678", "Blue");
@@ -45,6 +49,8 @@ public class Main {
 
         // Display free slots after unparking
         controller.displayFreeSlotsCount(VehicleType.CAR);
-        controller.displayOccupiedSlots(VehicleType.BIKE);
+        controller.displayOccupiedSlotsCount(VehicleType.BIKE);
+
+        controller.addSlot(5, VehicleType.TRUCK);
     }
 }

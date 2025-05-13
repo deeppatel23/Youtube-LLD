@@ -2,6 +2,8 @@ package Controller;
 
 
 import Enums.VehicleType;
+import Exceptions.InvalidFloorNumberException;
+import Exceptions.NoAvailableSlotException;
 import Models.Floor;
 import Models.ParkingSlot;
 import Models.Ticket;
@@ -11,13 +13,13 @@ import Service.ParkingLotManager;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
 public class ParkingLotController {
     private final ParkingLotManager parkingLotManager;
 
     public ParkingLotController(String parkingLotId) {
         this.parkingLotManager = new ParkingLotManager(parkingLotId);
+        System.out.println("Created ParkingLot: " + parkingLotId);
     }
 
     public void addFloor() {
@@ -29,8 +31,7 @@ public class ParkingLotController {
 
     public void addSlot(int floorNumber, VehicleType slotType) {
         if (floorNumber < 1 || floorNumber > parkingLotManager.getFloors().size()) {
-            System.out.println("Invalid floor number");
-            return;
+            throw new InvalidFloorNumberException(String.valueOf(floorNumber));
         }
 
         Floor floor = parkingLotManager.getFloors().get(floorNumber - 1);
@@ -46,8 +47,7 @@ public class ParkingLotController {
             System.out.println("Parked vehicle. Ticket ID: " + ticket.get().getTicketId());
             return ticket.get();
         } else {
-            System.out.println("No parking slot available for " + vehicle.getVehicleType());
-            return null;
+            throw new NoAvailableSlotException(vehicle.getVehicleType());
         }
     }
 
@@ -64,21 +64,44 @@ public class ParkingLotController {
     }
 
     public void displayFreeSlotsCount(VehicleType type) {
-        System.out.println("Displaying free slots for type: " + type);
-        Map<Integer, List<ParkingSlot>> freeSlotsCount = parkingLotManager.getAllFreeSlotsCountPerFloorPerVehicleType(type);
+        System.out.println("Displaying free slots count for type: " + type);
+        Map<Integer, List<ParkingSlot>> freeSlotsCount = parkingLotManager.getAllFreeSlotsPerFloorPerVehicleType(type);
         for (Map.Entry<Integer, List<ParkingSlot>> entry : freeSlotsCount.entrySet()) {
             System.out.print("Floor " + entry.getKey() + ": ");
             System.out.println(entry.getValue().size());
         }
     }
 
+    public void displayFreeSlots(VehicleType type) {
+        System.out.println("Displaying free slots for type: " + type);
+        Map<Integer, List<ParkingSlot>> freeSlotsCount = parkingLotManager.getAllFreeSlotsPerFloorPerVehicleType(type);
+        for (Map.Entry<Integer, List<ParkingSlot>> entry : freeSlotsCount.entrySet()) {
+            System.out.print("Floor " + entry.getKey() + ", Parking Slots: ");
+            for (ParkingSlot slot : entry.getValue()) {
+                System.out.print(slot.getSlotNumber() + " ");
+            }
+            System.out.println();
+        }
+    }
 
-    public void displayOccupiedSlots(VehicleType type) {
-        System.out.println("Displaying occupied slots for type: " + type);
-        Map<Integer, List<ParkingSlot>> occupiedSlots = parkingLotManager.getAllOccupiedSlotsCountPerFloorPerVehicleType(type);
+    public void displayOccupiedSlotsCount(VehicleType type) {
+        System.out.println("Displaying occupied slots count for type: " + type);
+        Map<Integer, List<ParkingSlot>> occupiedSlots = parkingLotManager.getAllOccupiedSlotsPerFloorPerVehicleType(type);
         for (Map.Entry<Integer, List<ParkingSlot>> entry : occupiedSlots.entrySet()) {
             System.out.print("Floor " + entry.getKey() + ": ");
             System.out.println(entry.getValue().size());
+        }
+    }
+
+    public void displayOccupiedSlots(VehicleType type) {
+        System.out.println("Displaying occupied slots for type: " + type);
+        Map<Integer, List<ParkingSlot>> occupiedSlots = parkingLotManager.getAllOccupiedSlotsPerFloorPerVehicleType(type);
+        for (Map.Entry<Integer, List<ParkingSlot>> entry : occupiedSlots.entrySet()) {
+            System.out.print("Floor " + entry.getKey() + ", Parking Slots: ");
+            for (ParkingSlot slot : entry.getValue()) {
+                System.out.print(slot.getSlotNumber() + " ");
+            }
+            System.out.println();
         }
     }
 }
