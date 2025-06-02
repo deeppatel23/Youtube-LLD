@@ -1,26 +1,52 @@
-💡 Problem Title:
-Design a Pluggable and Extensible In-Memory Key-Value Store
+# Key-Value Store
 
-🎯 Objective:
-Design a modular Key-Value Store system that supports multiple storage engines (like an in-memory HashMap or Redis) and allows runtime addition of extra features such as logging and time-to-live (TTL) for keys, without modifying the core logic of the system.
+A flexible and extensible key-value store system implemented in Java, supporting multiple storage backends and optional runtime enhancements such as TTL and logging.
 
-🧩 Functional Requirements:
-Basic Key-Value Operations
+---
 
-put(String key, String value)
+## 🧩 Core Operations (MVP)
 
-String get(String key)
+The key-value store supports the following core operations:
 
-void delete(String key)
+- `set(key, value)` – Store a key-value pair.
+- `get(key)` – Retrieve the value associated with a key.
+- `delete(key)` – Remove a key and its associated value.
 
-Pluggable Storage Backends
+These operations should function with any datastore implementation (e.g., in-memory, Redis-like stub).
 
-Support for multiple key-value store backends:
+---
 
-InMemoryStore: uses Java’s HashMap
+## 🗃️ Multiple Storage Backends
 
-RedisKVStore: mocks a Redis-like storage system
+Your system should support at least **two** storage backends:
 
-Runtime Feature Extensions (Decorators)
+### 1. SimpleKVStore (In-Memory)
+- Backed by a Java `HashMap`.
 
-LoggingDecorator: Logs every operation (GET, PUT, DELETE)
+### 2. RedisKVStore (Mock)
+- Simulates Redis using a stub or mock class.
+- Does **not** connect to a real Redis server.
+
+---
+
+## ⚙️ Functional Enhancements
+
+### ⏱️ TTL (Time-To-Live) Support
+- Optionally store a key with a TTL value in **milliseconds**.
+- Keys should automatically expire after the specified TTL.
+- TTL should not be baked into every store — must be optional.
+- Default TTL: `100000 milliseconds` (100 seconds).
+- During a `get()`, if a key is expired, it should be removed from the datastore.
+
+### 📜 Logging Support
+- Optionally log every `set`, `get`, and `delete` operation.
+- This feature should be dynamically attachable and not embedded into every store.
+
+---
+
+## ✅ Expectations
+
+- Use **interface-driven design** to promote flexibility.
+- Follow **SOLID principles** and established **design patterns**.
+- Include **working code** with a driver class demonstrating functionality.
+- Allow users to **configure optional functionalities** like TTL and logging at runtime.
