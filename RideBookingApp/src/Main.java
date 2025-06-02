@@ -26,7 +26,7 @@ public class Main {
         Ride r2 = rideService.offerRide("Shipra", "Bangalore", "Mysore", 1, "Activa", VehicleType.BIKE);
         Ride r3 = rideService.offerRide("Shipra", "Bangalore", "Mysore", 2, "Polo", VehicleType.CAR);
         Ride r4 = rideService.offerRide("Shashank", "Hyderabad", "Bangalore", 2, "Baleno", VehicleType.CAR);
-        Ride r5 = rideService.offerRide("Rahul", "Hyderabad", "Bangalore", 5, "XUV", VehicleType.CAR);
+        Ride r5 = rideService.offerRide("Rahul", "Hyderabad", "Bangalore", 5, "RoyalEnfield", VehicleType.BIKE);
         Ride r6 = rideService.offerRide("Rohan", "Bangalore", "Pune", 1, "Swift", VehicleType.CAR); // Should fail
 
         Ride sr1 = rideService.selectRide("Nandini", "Bangalore", "Mysore", 1, new MostVacantStrategy(), null);
@@ -38,8 +38,6 @@ public class Main {
         if (sr1 != null) rideService.endRide(sr1.getId());
         if (sr2 != null) rideService.endRide(sr2.getId());
         if (sr4 != null) rideService.endRide(sr4.getId());
-
-        rideService.endRide(r3.getId()); // Ending unused offered ride
 
         rideService.printStats();
     }
