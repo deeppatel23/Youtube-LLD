@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b5c821c1-5fcf-4e81-a1bb-a5c48b80a15d" name="Changes" comment="" />
+    <list default="true" id="b5c821c1-5fcf-4e81-a1bb-a5c48b80a15d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Solid_Principles/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Solid_Principles/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -41,6 +44,8 @@
     &quot;Application.AbstractFactoryDP.BadCode.Application.executor&quot;: &quot;Run&quot;,
     &quot;Application.AbstractFactoryDP.GoodCode.Application.executor&quot;: &quot;Run&quot;,
     &quot;Application.Application.executor&quot;: &quot;Run&quot;,
+    &quot;Application.BuilderDP.BadCode.Application.executor&quot;: &quot;Run&quot;,
+    &quot;Application.BuilderDP.GoodCode.Application.executor&quot;: &quot;Run&quot;,
     &quot;Application.FactoryDP.BadCode.Application.executor&quot;: &quot;Run&quot;,
     &quot;Application.FactoryDP.GoodCode.Application.executor&quot;: &quot;Run&quot;,
     &quot;Application.FactoryDP.GoodCode.NotificationService.executor&quot;: &quot;Run&quot;,
@@ -64,20 +69,7 @@
       <recent name="ObjectPoolDP.GoodCode" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Application">
-    <configuration name="AbstractFactoryDP.BadCode.Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="AbstractFactoryDP.BadCode.Application" />
-      <module name="Creation_DP" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="AbstractFactoryDP.BadCode.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.BuilderDP.GoodCode.Application">
     <configuration name="AbstractFactoryDP.GoodCode.Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="AbstractFactoryDP.GoodCode.Application" />
       <module name="Creation_DP" />
@@ -104,12 +96,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FactoryDP.GoodCode.Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="FactoryDP.GoodCode.Application" />
+    <configuration name="BuilderDP.BadCode.Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="BuilderDP.BadCode.Application" />
       <module name="Creation_DP" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="FactoryDP.GoodCode.*" />
+          <option name="PATTERN" value="BuilderDP.BadCode.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BuilderDP.GoodCode.Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="BuilderDP.GoodCode.Application" />
+      <module name="Creation_DP" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="BuilderDP.GoodCode.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -132,21 +137,13 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.BuilderDP.GoodCode.Application" />
+        <item itemvalue="Application.BuilderDP.BadCode.Application" />
         <item itemvalue="Application.Application" />
         <item itemvalue="Application.SingletonDP.BadCode.Application" />
         <item itemvalue="Application.AbstractFactoryDP.GoodCode.Application" />
-        <item itemvalue="Application.AbstractFactoryDP.BadCode.Application" />
-        <item itemvalue="Application.FactoryDP.GoodCode.Application" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-jdk-9823dce3aa75-fbdcb00ec9e3-intellij.indexing.shared.core-IU-251.23774.435" />
-        <option value="bundled-js-predefined-d6986cc7102b-f27c65a3e318-JavaScript-IU-251.23774.435" />
-      </set>
-    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">

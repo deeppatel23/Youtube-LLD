@@ -5,23 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a6af8bd2-c43e-43ba-8756-e4d2ee448d46" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../Creation_DP/src/AbstractFactoryDP/GoodCode/AbstractUIFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Creation_DP/src/FactoryDP/GoodCode/Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Creation_DP/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Creation_DP/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Creation_DP/src/AbstractFactoryDP/GoodCode/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Creation_DP/src/AbstractFactoryDP/GoodCode/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Creation_DP/src/AbstractFactoryDP/GoodCode/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Creation_DP/src/AbstractFactoryDP/GoodCode/UserInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Creation_DP/src/FactoryDP/BadCode/EmailNotification.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Creation_DP/src/FactoryDP/BadCode/EmailNotification.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Creation_DP/src/FactoryDP/BadCode/NotificationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Creation_DP/src/FactoryDP/BadCode/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Creation_DP/src/FactoryDP/BadCode/SMSNotification.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Creation_DP/src/FactoryDP/BadCode/SMSNotification.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Creation_DP/src/FactoryDP/GoodCode/EmailNotification.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Creation_DP/src/FactoryDP/GoodCode/EmailNotification.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Creation_DP/src/FactoryDP/GoodCode/NotificationFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Creation_DP/src/FactoryDP/GoodCode/NotificationFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Creation_DP/src/FactoryDP/GoodCode/NotificationService.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/InterfaceSegregation/InvoiceManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/InterfaceSegregation/InvoiceManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LiskovSubstitutionPrinciple/InvoiceManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LiskovSubstitutionPrinciple/InvoiceManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OpenClosed/InvoiceManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OpenClosed/InvoiceManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SingleResponsibility/InvoiceCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SingleResponsibility/InvoiceCalculator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,14 +142,6 @@
         <item itemvalue="Application.InvoiceManager" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-jdk-9823dce3aa75-fbdcb00ec9e3-intellij.indexing.shared.core-IU-251.23774.435" />
-        <option value="bundled-js-predefined-d6986cc7102b-f27c65a3e318-JavaScript-IU-251.23774.435" />
-      </set>
-    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
